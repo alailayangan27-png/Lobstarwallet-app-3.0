@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phantom UI Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h2 id="walletName">Wallet</h2>
+    <p id="status">Not Connected</p>
+  </div>
+
+  <h1 id="balance">$0.00</h1>
+
+  <div class="actions">
+    <button onclick="connectWallet()">Connect</button>
+    <button onclick="swap()">Swap</button>
+    <button onclick="send()">Send</button>
+  </div>
+
+  <div class="tokens">
+    <div class="token">
+      <span>SOL</span>
+      <span id="solBalance">0</span>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
