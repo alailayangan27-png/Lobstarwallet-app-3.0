@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(180deg, #1e1e2f, #12121c);
+  color: white;
+}
+
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.actions button {
+  margin: 10px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #6c5ce7;
+  color: white;
+  font-size: 16px;
+}
+
+.tokens {
+  margin-top: 30px;
+}
+
+.token {
+  display: flex;
+  justify-content: space-between;
+  background: #2a2a3d;
+  padding: 15px;
+  border-radius: 10px;
+}
