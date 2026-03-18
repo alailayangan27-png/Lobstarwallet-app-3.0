@@ -1,41 +1,74 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: linear-gradient(180deg, #1e1e2f, #12121c);
+  background: #0f0f1a;
   color: white;
 }
 
-.container {
+.app {
+  max-width: 400px;
+  margin: auto;
   padding: 20px;
-  text-align: center;
 }
 
 .header {
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
-h1 {
-  font-size: 40px;
+.balance-card {
+  background: linear-gradient(45deg, #6c5ce7, #8e44ad);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
 }
 
 .actions button {
-  margin: 10px;
-  padding: 12px 20px;
+  background: #1f1f35;
   border: none;
-  border-radius: 20px;
-  background: #6c5ce7;
+  padding: 12px;
+  border-radius: 15px;
   color: white;
-  font-size: 16px;
-}
-
-.tokens {
-  margin-top: 30px;
 }
 
 .token {
+  background: #1a1a2e;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
-  background: #2a2a3d;
-  padding: 15px;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background: #1f1f35;
+  margin: 100px auto;
+  padding: 20px;
+  width: 80%;
+  border-radius: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
   border-radius: 10px;
+  border: none;
 }
