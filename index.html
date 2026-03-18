@@ -1,56 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Phantom Clone</title>
+  <title>Wallet UI</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="app">
 
+  <!-- HEADER -->
   <div class="header">
-    <h3 id="wallet">Wallet</h3>
-    <p id="status">Not Connected</p>
+    <div class="profile"></div>
+    <h3 id="wallet">Wallet 1</h3>
+    <div class="icon"></div>
   </div>
 
-  <div class="balance-card">
+  <!-- BALANCE -->
+  <div class="balance">
     <h1 id="usd">$0.00</h1>
-    <p id="sol">0 SOL</p>
+    <p class="profit">+$0.00 +0.00%</p>
   </div>
 
+  <!-- ACTIONS -->
   <div class="actions">
-    <button onclick="connectWallet()">Connect</button>
+    <button onclick="connectWallet()">Deposit</button>
+    <button onclick="buy()">Buy</button>
     <button onclick="openSend()">Send</button>
-    <button onclick="openSwap()">Swap</button>
   </div>
 
-  <div class="token">
-    <span>SOL</span>
-    <span id="solBalance">0</span>
+  <!-- TOKENS -->
+  <div class="tokens">
+
+    <div class="token">
+      <div class="left">
+        <div class="logo sol"></div>
+        <div>
+          <h4>Solana</h4>
+          <p id="solAmount">0 SOL</p>
+        </div>
+      </div>
+      <div class="right">
+        <h4 id="solUsd">$0.00</h4>
+        <p class="green">+$0</p>
+      </div>
+    </div>
+
+    <div class="token">
+      <div class="left">
+        <div class="logo eth"></div>
+        <div>
+          <h4>Ethereum</h4>
+          <p>0 ETH</p>
+        </div>
+      </div>
+      <div class="right">
+        <h4>$0.00</h4>
+        <p class="green">+$0</p>
+      </div>
+    </div>
+
+    <div class="token">
+      <div class="left">
+        <div class="logo matic"></div>
+        <div>
+          <h4>Polygon</h4>
+          <p>0 MATIC</p>
+        </div>
+      </div>
+      <div class="right">
+        <h4>$0.00</h4>
+        <p class="green">+$0</p>
+      </div>
+    </div>
+
   </div>
 
-</div>
-
-<!-- SEND MODAL -->
-<div id="sendModal" class="modal">
-  <div class="modal-content">
-    <h3>Send SOL</h3>
-    <input id="sendTo" placeholder="Recipient address">
-    <input id="sendAmount" placeholder="Amount">
-    <button onclick="send()">Send</button>
-    <button onclick="closeModal()">Close</button>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <span>💰</span>
+    <span>⬛</span>
+    <span>🔄</span>
+    <span>⚡</span>
+    <span>🌐</span>
   </div>
-</div>
 
-<!-- SWAP MODAL -->
-<div id="swapModal" class="modal">
-  <div class="modal-content">
-    <h3>Swap (Demo)</h3>
-    <input placeholder="From SOL">
-    <input placeholder="To Token">
-    <button onclick="swap()">Execute Swap</button>
-    <button onclick="closeModal()">Close</button>
-  </div>
 </div>
 
 <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
