@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: #0f0f1a;
+  background: #0b0b12;
   color: white;
 }
 
@@ -11,64 +11,107 @@ body {
   padding: 20px;
 }
 
+/* HEADER */
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: purple;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+/* BALANCE */
+.balance {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.balance h1 {
+  font-size: 42px;
+}
+
+.profit {
+  color: #00ff88;
+}
+
+/* BUTTONS */
+.actions {
   display: flex;
   justify-content: space-between;
 }
 
-.balance-card {
-  background: linear-gradient(45deg, #6c5ce7, #8e44ad);
-  padding: 20px;
-  border-radius: 20px;
-  text-align: center;
-  margin: 20px 0;
-}
-
-.actions {
-  display: flex;
-  justify-content: space-around;
-}
-
 .actions button {
-  background: #1f1f35;
+  flex: 1;
+  margin: 5px;
+  padding: 14px;
+  border-radius: 25px;
   border: none;
-  padding: 12px;
-  border-radius: 15px;
+  background: linear-gradient(45deg, #6c5ce7, #8e44ad);
   color: white;
+  font-weight: bold;
+}
+
+/* TOKENS */
+.tokens {
+  margin-top: 20px;
 }
 
 .token {
   background: #1a1a2e;
   padding: 15px;
   border-radius: 15px;
-  margin-top: 20px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
 }
 
-/* MODAL */
-.modal {
-  display: none;
+.left {
+  display: flex;
+  gap: 10px;
+}
+
+.logo {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.sol {
+  background: linear-gradient(45deg, #00ffa3, #dc1fff);
+}
+
+.eth {
+  background: gray;
+}
+
+.matic {
+  background: purple;
+}
+
+.green {
+  color: #00ff88;
+}
+
+/* NAVBAR */
+.navbar {
   position: fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background: rgba(0,0,0,0.7);
-}
-
-.modal-content {
-  background: #1f1f35;
-  margin: 100px auto;
-  padding: 20px;
-  width: 80%;
-  border-radius: 20px;
-}
-
-input {
+  bottom: 0;
+  left: 0;
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 10px;
-  border: none;
+  background: #111;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
 }
