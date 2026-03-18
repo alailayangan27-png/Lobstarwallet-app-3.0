@@ -1,33 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Phantom UI Clone</title>
+  <title>Phantom Clone</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+<div class="app">
+
   <div class="header">
-    <h2 id="walletName">Wallet</h2>
+    <h3 id="wallet">Wallet</h3>
     <p id="status">Not Connected</p>
   </div>
 
-  <h1 id="balance">$0.00</h1>
+  <div class="balance-card">
+    <h1 id="usd">$0.00</h1>
+    <p id="sol">0 SOL</p>
+  </div>
 
   <div class="actions">
     <button onclick="connectWallet()">Connect</button>
-    <button onclick="swap()">Swap</button>
-    <button onclick="send()">Send</button>
+    <button onclick="openSend()">Send</button>
+    <button onclick="openSwap()">Swap</button>
   </div>
 
-  <div class="tokens">
-    <div class="token">
-      <span>SOL</span>
-      <span id="solBalance">0</span>
-    </div>
+  <div class="token">
+    <span>SOL</span>
+    <span id="solBalance">0</span>
+  </div>
+
+</div>
+
+<!-- SEND MODAL -->
+<div id="sendModal" class="modal">
+  <div class="modal-content">
+    <h3>Send SOL</h3>
+    <input id="sendTo" placeholder="Recipient address">
+    <input id="sendAmount" placeholder="Amount">
+    <button onclick="send()">Send</button>
+    <button onclick="closeModal()">Close</button>
   </div>
 </div>
 
+<!-- SWAP MODAL -->
+<div id="swapModal" class="modal">
+  <div class="modal-content">
+    <h3>Swap (Demo)</h3>
+    <input placeholder="From SOL">
+    <input placeholder="To Token">
+    <button onclick="swap()">Execute Swap</button>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
 <script src="app.js"></script>
+
 </body>
 </html>
